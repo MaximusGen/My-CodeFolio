@@ -1,0 +1,105 @@
+.card-back {
+    background: #1a2f42;
+    transform:rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-family: $font;
+    overflow-y: auto;
+
+    .about-me, .formation{
+        font-size:1.5rem;
+    }
+    .formation{
+      display: block;
+      margin-bottom: 10px;
+    }
+    .formation a{
+      color: #1a2f42;
+    } 
+    .formation a::after{
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #1a2f42;
+      transition: width .3s;
+    }
+    .formation a:hover::after{
+       width: 40%;
+    }
+
+    .btn-link  {
+        display:inline-block;
+        border-radius: 10px;
+        font-family: $font;
+        padding: 15px;
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 1.5rem;
+        color: #1a2f42;
+        transition: 
+        background-color 0.3s ease-out,
+        color 0.3s ease-out;
+    }
+    .btn-link:hover {
+        background-color: #1a2f42;
+        color: #fff;
+        transform: scale(1.2);
+        transition: transform 0.3s ease-out 
+    }
+    .bg-fb {
+        background-color: #3b5998;
+      }
+      .bg-inst {
+        background-color: #ac2bac;
+      }
+      .bg-lkd {
+        background-color: #0082ca;
+      }
+      .bg-icon{
+          background-color: #000;
+      }
+      .btn-floating{
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.4rem;
+        line-height: 2.4;
+    }
+     
+    .competences i {
+      font-size: 4rem;
+      margin-right: 10px;
+    }
+    #icon-html{
+      color:#f16529;
+    }
+    #icon-css3{
+      color:#2194f0;
+    }
+    #icon-js{
+      color:#efd81d;
+    }
+    #icon-bootstrap{
+      color:#6438b1;
+    }
+    #icon-sass{
+      color:#c96195;
+    }
+    #icon-react{
+      color:#00d5f7;
+    }
+    #icon-nodejs{
+      color: #87bf00;
+    }
+} 
+
+
+@keyframes border-bottom {
+   from {
+      border-bottom: none;
+   }
+   to {
+    border-bottom: #1a2f42 1px solid;
+   }
+}

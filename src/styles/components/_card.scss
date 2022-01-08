@@ -1,0 +1,74 @@
+.card-container {
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 30px;
+    margin: 80px 0;
+
+    .card-wrapper {
+        position: relative;
+        min-height: 350px;
+        perspective: 2000px;
+        perspective-origin: top;
+        
+        .card {
+            position: relative;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.8s cubic-bezier(0.86,0,0.07,1);
+            font-weight: bold;
+         
+            .card-front,
+            .card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px -1px 1px 0px, 
+                            rgba(0, 0, 0, 0.1) 1px 0px 1px 0px,
+                            rgba(0, 0, 0, 0.1) -1px 0px 1px 0px,
+                            rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+            }
+                       
+        }
+    }
+    
+    .card-wrapper:hover .card {
+        transform: rotateY(180deg);
+    }
+
+    // .card-wrapper:nth-child(odd) .card-back a:hover {
+    //     background-color: red;
+    //     color: #fff;
+    // }
+    // .card-wrapper:nth-child(even) .btn-link:hover {
+    //     background-color: #1a2f42;
+    //     color: #fff
+    // }
+    .card-wrapper:nth-child(even) .card-back {
+        background-color: #feae96;
+        background-image: linear-gradient(315deg, #feae96 0%, #fe0944 74%);
+        color: #fff;
+    }
+    .card-wrapper:nth-child(odd) .card-back {
+        background-color: #fff;
+        color: #1a2f42;
+    }
+    .card-wrapper:nth-child(even) .card-front {
+        background-color: #fff;
+        color: #1a2f42;
+    }
+    .card-wrapper:nth-child(odd) .card-front {
+        background-color: #feae96;
+        background-image: linear-gradient(315deg, #feae96 0%, #fe0944 74%);
+        color: #fff;
+    }
+
+    @media screen and (max-width: 400px) {
+        .card-wrapper{
+            width:315px;
+        }
+    }
+}

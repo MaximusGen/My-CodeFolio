@@ -1,0 +1,23 @@
+nav {
+    width: 100%;
+    background-color: rgb(26, 47, 66);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    .logo img{
+      width: 100px;
+      height: 70px;
+    }
+    .link-nav {
+        font-size: 1.7rem;
+        font-family: $font;
+        color: #fff;
+        margin-left: 20px;
+    }
+    .link-nav a:hover {
+        color: red;
+    }
+}
+
+
+

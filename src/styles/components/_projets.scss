@@ -1,0 +1,115 @@
+.container-projets{
+    .title-container {
+       display: flex;
+       justify-content:space-between;
+       align-items:center;
+        h2 {
+            text-align: center;
+            color: #1a2f42;
+            font-family: $font;
+            flex-grow: 2;
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+
+        .cross{
+          font-size: 2rem;
+          color: #1a2f42;
+          cursor: pointer;
+        }
+        .cross:hover{
+          color: red;
+          transition: 0.5s ease-in-out;
+        }
+    }
+
+    .projets-content {
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-gap: 30px;
+        margin: 80px 0;
+    }
+}
+
+
+
+.card-projets {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: $cardShadow;
+  text-decoration: none;
+  .card-projets-image {      
+    width: 100%;
+    height: auto;
+  }
+  .card-projets-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: 25px 0;    
+    background-color: var(--surface-color, #f1f1f1);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+
+    .overlay-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 2em;
+      padding: 2em;
+      border-radius: calc(var(--curve) * 1px) 0 0 0;    
+      background-color: var(--surface-color);
+      transform: translateY(-100%);
+      transition: .2s ease-in-out;
+
+
+      .overlay-thumb {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;      
+        border-radius: 50%;      
+      }
+      
+      .overlay-title {
+        font-size: 1.5em;
+        margin: 0 0 .3em;
+        color: #1a2f42;
+        font-weight: bold;
+        font-family: $font-card; 
+      }
+    }
+    .overlay-description {
+      padding: 0 2em 2em;
+      margin: 0;
+      font-size: 1.2em;
+      color: #1a2f42;
+      font-family: $font;   
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    }
+  }
+}
+
+
+
+.card-projets:hover .card-projets-overlay {
+  transform: translateY(0);
+}
+
+
+.card-projets:hover .overlay-header {
+  transform: translateY(0);
+}
+
+  @media  screen and (max-width:400px) {
+    .card-projets{
+      width: 315px;
+    }
+  }
