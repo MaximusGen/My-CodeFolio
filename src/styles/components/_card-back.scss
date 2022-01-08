@@ -66,33 +66,35 @@
         font-size: 1.4rem;
         line-height: 2.4;
     }
-     
-    .competences i {
-      font-size: 4rem;
-      margin-right: 10px;
+    .competence{
+      height: 100%;
+      & ul {
+        margin-top: 1.5rem;
+      }
+      & li{
+        font-size:20px;
+      }
+      & p {
+        font-size:20px;
+      }
+      & a:hover {
+        color:#feae96 ;
+      }
     }
-    #icon-html{
-      color:#f16529;
-    }
-    #icon-css3{
-      color:#2194f0;
-    }
-    #icon-js{
-      color:#efd81d;
-    }
-    #icon-bootstrap{
-      color:#6438b1;
-    }
-    #icon-sass{
-      color:#c96195;
-    }
-    #icon-react{
-      color:#00d5f7;
-    }
-    #icon-nodejs{
-      color: #87bf00;
-    }
+
 } 
+
+.card-back::-webkit-scrollbar {
+  width: 1em;
+}
+.card-back::-webkit-scrollbar-track {
+  background-color: #fff
+}
+.card-back::-webkit-scrollbar-thumb {
+  background-color: #feae96;
+  background-image: linear-gradient(315deg, #feae96 0%, #fe0944 74%);
+  border-radius:100px;
+}
 
 
 @keyframes border-bottom {

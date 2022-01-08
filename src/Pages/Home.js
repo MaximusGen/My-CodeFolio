@@ -6,6 +6,7 @@ import Main from "../components/Home/Main";
 import NavBar from "../components/NavBar";
 
 export default function Home() {
+  
   return (
     <>
       <header>
@@ -15,7 +16,7 @@ export default function Home() {
       </header>
 
       <main>
-
+         
         <Main/>
         
       </main>
