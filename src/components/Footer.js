@@ -10,7 +10,7 @@ export default function Footer() {
   const isEmail = () => {
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     const emailError = document.getElementById("email-error");
-    const emainErrorInput =document.getElementById("email")
+    const emainErrorInput = document.getElementById("email");
 
     if (email.match(regex)) {
       emailError.innerHTML = "Votre E-mail:";
@@ -30,7 +30,7 @@ export default function Footer() {
     const nameErrorInput = document.getElementById("name");
     const nameRegex = /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/;
 
-    if(name.match(nameRegex)) {
+    if (name.match(nameRegex)) {
       nameError.innerHTML = "Votre Nom et Prénom";
       nameError.classList.add("text-white");
       nameErrorInput.classList.remove("error-contact");
@@ -49,7 +49,6 @@ export default function Footer() {
 
     statusMess.innerHTML = message;
     statusMess.style.color = "#b31b1b";
-
   };
 
   const succesMessage = () => {
@@ -84,14 +83,14 @@ export default function Footer() {
     } else {
       failMessage("Merci de remplir correctement le formulaire ! ⚠️ ");
 
-       setTimeout(() => {
-         failMessage('')
-       }, 5000)
+      setTimeout(() => {
+        failMessage("");
+      }, 5000);
       isEmail(false);
       isName(false);
       messageErrorInput.classList.add("error-contact");
-      messageErrorLabel.innerHTML = "Votre Message est incorrect ! ⚠️"
-      messageErrorLabel.style.color = "#b31b1b"
+      messageErrorLabel.innerHTML = "Votre Message est incorrect ! ⚠️";
+      messageErrorLabel.style.color = "#b31b1b";
     }
   };
 
@@ -125,8 +124,8 @@ export default function Footer() {
           </h2>
           {/* <!--Section description--> */}
           <p className="text-center w-responsive text-white mx-auto mb-5 fs-5">
-            Vous avez une question? N'hésitez pas à me contacter. Je
-            reviendrai vers vous pour plus de précisions.
+            Vous avez une question? N'hésitez pas à me contacter. Je reviendrai
+            vers vous pour plus de précisions.
           </p>
 
           <div className="row">
@@ -144,6 +143,7 @@ export default function Footer() {
                   <div className="col-md-6">
                     <div className="md-form mb-0">
                       <input
+                        aria-label="votre nom et prénom"
                         type="text"
                         id="name"
                         name="name"
@@ -151,7 +151,11 @@ export default function Footer() {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                       />
-                      <label htmlFor="name" id="name-label" className="texte-white fs-5">
+                      <label
+                        htmlFor="name"
+                        id="name-label"
+                        className="texte-white fs-5"
+                      >
                         Votre Nom et Prénom:
                       </label>
                     </div>
@@ -162,6 +166,7 @@ export default function Footer() {
                   <div className="col-md-6">
                     <div className="md-form mb-0">
                       <input
+                        aria-label="votre email"
                         type="text"
                         id="email"
                         name="email"
@@ -187,6 +192,7 @@ export default function Footer() {
                   <div className="col-md-12">
                     <div className="md-form mb-0">
                       <input
+                        aria-label="sujet du message"
                         type="text"
                         id="subject"
                         name="subject"
@@ -208,6 +214,7 @@ export default function Footer() {
                   <div className="col-md-12">
                     <div className="md-form">
                       <textarea
+                        aria-label="votre message"
                         type="text"
                         id="message"
                         name="message"
@@ -216,7 +223,11 @@ export default function Footer() {
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                       ></textarea>
-                      <label htmlFor="message" id="message-label" className="fs-5 texte-white">
+                      <label
+                        htmlFor="message"
+                        id="message-label"
+                        className="fs-5 texte-white"
+                      >
                         Votre Message:
                       </label>
                     </div>
@@ -228,8 +239,9 @@ export default function Footer() {
               <div className="text-center text-md-left">
                 <button
                   type="submit"
-                  className="btn btn-danger btn-lg fs-5 btn-style"
+                  className="btn btn-lg fs-5 btn-style"
                   onClick={handleSubmit}
+                  aria-label="Envoyez votre message"
                 >
                   Envoyez
                 </button>
@@ -257,16 +269,12 @@ export default function Footer() {
 
           <div className="text-center texte-white p-3">
             <p>
-              <Link to="/mentions-legales">
-              Mention Légales
-              </Link>
+              <Link to="/mentions-legales">Mention Légales</Link>
 
               {/* -
               <Link to="/politiques-de-confidentialites">
               Politiques de confidentialité
               </Link> */}
-
-              
             </p>
             <p> © 2021 Copyright: Maxime Paupy</p>
           </div>

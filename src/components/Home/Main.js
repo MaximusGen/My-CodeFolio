@@ -57,7 +57,7 @@ export default function Main() {
           <div className="card">
             <div className="card-front">
               <p>A propos de moi !</p>
-              <i className="arrow-icon fas fa-arrow-right"></i>
+              <i className="arrow-icon fas fa-arrow-right" aria-label="retourner la carte"></i>
             </div>
             <div className="card-back">
               <p className="about-me">
@@ -88,7 +88,7 @@ export default function Main() {
           <div className="card">
             <div className="card-front">
               <p>Ma Formation</p>
-              <i className="arrow-icon fas fa-arrow-right"></i>
+              <i className="arrow-icon fas fa-arrow-right" aria-label="retourner la carte"></i>
             </div>
             <div className="card-back">
               <p>
@@ -98,7 +98,7 @@ export default function Main() {
                   7 projets à réalisés avec un mentor
                 </span>
                 <span className="formation">
-                  <a href="https://openclassrooms.com/fr/paths/556-developpeur-web">
+                  <a href="https://openclassrooms.com/fr/paths/556-developpeur-web" aria-label="Voir plus">
                     👁️ Voir plus
                   </a>
                 </span>
@@ -111,7 +111,7 @@ export default function Main() {
           <div className="card" id="mes-projets">
             <div className="card-front">
               <p>Mes Projets</p>
-              <i className="arrow-icon fas fa-arrow-right"></i>
+              <i className="arrow-icon fas fa-arrow-right" aria-label="retourner la carte"></i>
             </div>
             <div className="card-back">
               <a
@@ -130,7 +130,7 @@ export default function Main() {
           <div className="card">
             <div className="card-front">
               <p>Mes Réseaux !</p>
-              <i className="arrow-icon fas fa-arrow-right"></i>
+              <i className="arrow-icon fas fa-arrow-right" aria-label="retourner la carte"></i>
             </div>
             <div className="card-back">
               <a
@@ -138,7 +138,7 @@ export default function Main() {
                 href="https://www.instagram.com/maximusgen___/?hl=fr"
                 role="button"
               >
-                <i className="fab fa-instagram"></i>
+                <i className="fab fa-instagram" aria-label="instagram"></i>
               </a>
 
               <a
@@ -146,7 +146,7 @@ export default function Main() {
                 href="https://www.facebook.com/MaxZaraPaupy"
                 role="button"
               >
-                <i className="fab fa-facebook-f"></i>
+                <i className="fab fa-facebook-f" aria-label="facebook"></i>
               </a>
 
               <a
@@ -154,7 +154,7 @@ export default function Main() {
                 href="https://www.linkedin.com/in/maxime-paupy-a13497190/"
                 role="button"
               >
-                <i className="fab fa-linkedin-in"></i>
+                <i className="fab fa-linkedin-in" aria-label="linkedIn"></i>
               </a>
 
               <a
@@ -162,7 +162,7 @@ export default function Main() {
                 href="https://github.com/MaximusGen/"
                 role="button"
               >
-                <i className="fab fa-github"></i>
+                <i className="fab fa-github" aria-label="gitHub"></i>
               </a>
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function Main() {
           <div className="card">
             <div className="card-front">
               <p>Compétences</p>
-              <i className="arrow-icon fas fa-arrow-right"></i>
+              <i className="arrow-icon fas fa-arrow-right" aria-label="retourner la carte"></i>
             </div>
             <div className="card-back">
               <div className="competence">

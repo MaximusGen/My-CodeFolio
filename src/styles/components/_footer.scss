@@ -10,7 +10,18 @@ footer {
     }
     .btn-style{
       margin-left: 350px;
+      color: #000;
+      background-color: #fff;
+      transition: 0.5s ease-out;
     }
+    .btn-style:hover{
+      color: #fff;
+      background-color: #b31b1b;
+      transition: background-color 0.4s ease-out,
+      transform 0.5s ease-out; 
+      transform: scale(1.2);
+    }
+
     @media screen and (max-width:400px) {
        .btn-style{
          margin-left: 0;

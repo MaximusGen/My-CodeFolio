@@ -8,7 +8,7 @@ export default function NavBar() {
             <img src="../assets/img/logo.jpg" alt="logo-my-website" />
           </div>
           <div className="link-nav">
-            <a href="#contact">Contact</a>
+            <a href="#contact" aria-label="contact">Contact</a>
           </div>
         </nav>
 
