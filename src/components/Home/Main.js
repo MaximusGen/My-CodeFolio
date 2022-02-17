@@ -1,52 +1,13 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import Typed from "react-typed";
 import CardProjets from "./CardProjets";
-import "chart.js/auto";
-import { Chart } from "react-chartjs-2";
+import {data} from '../../database/data'
+import {FaReact, FaNodeJs, FaCss3, FaSass, FaBootstrap, FaJsSquare} from 'react-icons/fa'
+import { isEmpty } from './../../utils';
 
 export default function Main() {
-  const [showProjets, setShowProjets] = useState(false);
 
-  const [data, setData] = useState([]);
 
-  const Chartdata = {
-    labels: [
-      "HTML5",
-      "CSS3",
-      "JAVASCRIPT",
-      "REACTJS",
-      "NODEJS",
-      "SASS",
-      "BOOTSTRAP",
-    ],
-    datasets: [
-      {
-        label: "",
-        data: ["5", "4.8", "4.5", "4.5", "4", "4.5", "5"],
-        backgroundColor: [
-          "#f16529",
-          "#2194f0",
-          "#efd81d",
-          "#00d5f7",
-          "#87bf00",
-          "#c96195",
-          "#6438b1",
-        ],
-      },
-    ],
-  };
-
-  useEffect(() => {
-    getProjets();
-  }, []);
-
-  const getProjets = () => {
-    axios
-      .get("http://localhost:5005/projets")
-      .then((res) => setData(res.data))
-      .catch((err) => console.log(err));
-  };
 
   return (
     <div className="container">
@@ -95,7 +56,7 @@ export default function Main() {
                 <span className="formation">Openclassrooms</span>
                 <span className="formation">Bac+2 Développeur Web</span>
                 <span className="formation">
-                  7 projets à réalisés avec un mentor
+                  7 projets à réaliser avec un mentor
                 </span>
                 <span className="formation">
                   <a href="https://openclassrooms.com/fr/paths/556-developpeur-web" aria-label="Voir plus">
@@ -117,9 +78,7 @@ export default function Main() {
               <a
                 href="#projets"
                 className="btn-link"
-                onClick={() => setShowProjets(true)}
               >
-                {" "}
                 Let's go !!
               </a>
             </div>
@@ -137,6 +96,7 @@ export default function Main() {
                 className="btn btn-primary btn-floating m-1 bg-inst"
                 href="https://www.instagram.com/maximusgen___/?hl=fr"
                 role="button"
+                aria-label="lien vers instagram"
               >
                 <i className="fab fa-instagram" aria-label="instagram"></i>
               </a>
@@ -145,6 +105,7 @@ export default function Main() {
                 className="btn btn-primary btn-floating m-1 bg-fb"
                 href="https://www.facebook.com/MaxZaraPaupy"
                 role="button"
+                aria-label="lien vers facebook"
               >
                 <i className="fab fa-facebook-f" aria-label="facebook"></i>
               </a>
@@ -153,6 +114,7 @@ export default function Main() {
                 className="btn btn-primary btn-floating m-1 bg-lkd"
                 href="https://www.linkedin.com/in/maxime-paupy-a13497190/"
                 role="button"
+                aria-label="lien vers linkedin"
               >
                 <i className="fab fa-linkedin-in" aria-label="linkedIn"></i>
               </a>
@@ -161,6 +123,7 @@ export default function Main() {
                 className="btn btn-primary btn-floating m-1 bg-icon"
                 href="https://github.com/MaximusGen/"
                 role="button"
+                aria-label="lien vers github"
               >
                 <i className="fab fa-github" aria-label="gitHub"></i>
               </a>
@@ -171,18 +134,36 @@ export default function Main() {
         <div className="card-wrapper">
           <div className="card">
             <div className="card-front">
-              <p>Compétences</p>
+              <p>Langages</p>
               <i className="arrow-icon fas fa-arrow-right" aria-label="retourner la carte"></i>
             </div>
             <div className="card-back">
               <div className="competence">
-              <Chart type="bar" data={Chartdata} />
-              <ul>
-                <li>.Développement de sites et applications web</li>
-                <li>.Correction et amélioration d'un site web</li>
-                <li>.Référencement d'un site web</li>
-              </ul>
-              <p>Pour voir mes différent projets, je vous invite à visiter la carte <a href="#mes-projets">"Mes Projets"</a></p>
+                <div className="icon-competence">
+              <FaReact color="#5ccfee" size={60} aria-label="icon langages"/>
+                   <p>React</p>
+                </div>
+                <div className="icon-competence">
+              <FaNodeJs color="#89bb3c" size={60} aria-label="icon langages"/>
+                  <p>Node JS</p>
+                </div>
+                <div className="icon-competence">
+              <FaCss3 color="#2449d8" size={60} aria-label="icon langages"/>
+                  <p>CSS3</p>
+                </div>
+                <div className="icon-competence">
+              <FaSass color="#c36192" size={60} aria-label="icon langages"/>
+                  <p>SASS</p>
+                </div>
+                <div className="icon-competence">
+              <FaBootstrap color="#6d11ea" size={60}aria-label="icon langages" />
+                  <p>Bootstrap</p>
+                </div>
+
+                <div className="icon-competence">
+              <FaJsSquare color="#ead41c" size={60}aria-label="icon langages" />
+                  <p>JavaScript</p>
+                </div>
               </div>
             </div>
           </div>
@@ -204,24 +185,18 @@ export default function Main() {
         </div>
       </div>
 
-      {showProjets && (
         <div className="container-projets" id="projets">
           <div
             className="title-container"
-            onClick={() => setShowProjets(false)}
           >
             <h2>Mes Projets</h2>
-            <a href="#codefolio">
-              <i class="fas fa-times cross"></i>
-            </a>
           </div>
           <div className="projets-content">
-            {data.map((projets) => (
-              <CardProjets key={projets.id} projets={projets} />
-            ))}
+            {!isEmpty(data) && data.map((projet) => {
+              return  <CardProjets projet={projet} key={projet.id} />
+            })}
           </div>
         </div>
-      )}
     </div>
   );
 }

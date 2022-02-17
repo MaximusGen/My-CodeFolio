@@ -156,7 +156,7 @@ export default function Footer() {
                         id="name-label"
                         className="texte-white fs-5"
                       >
-                        Votre Nom et Prénom:
+                        Votre Nom et Prénom
                       </label>
                     </div>
                   </div>
@@ -179,7 +179,7 @@ export default function Footer() {
                         id="email-error"
                         className="fs-5 texte-white"
                       >
-                        Votre E-mail:
+                        Votre E-mail
                       </label>
                     </div>
                   </div>
@@ -201,7 +201,7 @@ export default function Footer() {
                         onChange={(e) => setSubject(e.target.value)}
                       />
                       <label htmlFor="subject" className="fs-5 texte-white">
-                        Sujet du Message:
+                        Sujet du Message
                       </label>
                     </div>
                   </div>
@@ -228,7 +228,7 @@ export default function Footer() {
                         id="message-label"
                         className="fs-5 texte-white"
                       >
-                        Votre Message:
+                        Votre Message
                       </label>
                     </div>
                   </div>

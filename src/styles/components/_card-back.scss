@@ -68,18 +68,19 @@
     }
     .competence{
       height: 100%;
-      & ul {
-        margin-top: 1.5rem;
-      }
-      & li{
-        font-size:20px;
-      }
-      & p {
-        font-size:20px;
-      }
-      & a:hover {
-        color:#feae96 ;
-      }
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 20px;
+        .icon-competence {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+
+        .icon-competence p {
+         margin-top: 10px;
+        }
     }
 
 } 
