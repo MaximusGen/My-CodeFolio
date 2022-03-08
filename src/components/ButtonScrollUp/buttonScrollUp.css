@@ -1,0 +1,27 @@
+/* .container-btn-scroll {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: transparent;
+} */
+
+.btn-empty {
+  opacity: 0;
+}
+
+.btn-full {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: opacity 1s ease;
+}

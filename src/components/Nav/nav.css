@@ -1,0 +1,137 @@
+.nav-container {
+  color: #fff;
+  overflow: hidden;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 46px;
+  width: 46px;
+}
+
+.nav-menu-circle {
+  background-color: #ff6f61;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 1000;
+}
+
+.nav-menu:hover .nav-menu-circle {
+  transform: scale(1.5);
+}
+
+.nav-menu.open .nav-menu-circle {
+  transform: scale(40);
+}
+
+.nav-menu-link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1002;
+}
+
+.nav-menu-icon {
+  position: absolute;
+  width: 20px;
+  height: 14px;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 1px;
+}
+
+.nav-menu-line {
+  background-color: #333;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu-line-1 {
+  top: 0;
+}
+
+.menu-line-2 {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.menu-line-3 {
+  bottom: 0;
+}
+
+.nav-menu.open .menu-line-1 {
+  transform: translateY(7px) translateY(-50%) rotate(-135deg);
+}
+
+.nav-menu.open .menu-line-2 {
+  opacity: 0;
+}
+
+.nav-menu.open .menu-line-3 {
+  transform: translateY(-7px) translateY(50%) rotate(135deg);
+}
+
+.nav-menu-overlay {
+  background-color: #ff6f61;
+  color: #333;
+  height: 50%;
+  width: 50%;
+  top: 10%;
+  left: -10%;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1001;
+}
+
+.nav-menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.2s;
+}
+
+.nav-menu-overlay a {
+  color: var(--color-font-secondary);
+  font-weight: 600;
+  font-size: 32px;
+  padding: 2%;
+  /* margin:  25% 1% 0; */
+  display: inline-block;
+}
+
+.nav-menu-overlay a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width .3s;
+}
+
+.nav-menu-overlay a:hover::after {
+  width:100%;
+}
+
+
+
+
+
+
+

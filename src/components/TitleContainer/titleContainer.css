@@ -1,0 +1,52 @@
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items:center;flex-direction: column;
+}
+
+.container h1 {
+    font-size:10rem;
+    color: #fff;
+    color: var( --color-font-secondary);
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 2rem;
+}
+
+.container h1 span {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    text-shadow: 10px 0 0 var( --color-font-third );
+}
+
+
+
+.indication{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.indication_img{
+    width: 80px;
+    height: 80px;
+}
+
+.indication_line{
+    width: 2px;
+    height: 100px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.indication_text{
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    font-size: 3rem;
+}
