@@ -4,17 +4,12 @@
     align-items:center;
 }
 
-.aboutMe-container h2 span{
-   color: #fff;
-   position: relative;
-   display: block;
-   font-size: 5rem;
-   text-shadow: 10px 0 0 var(--color-font-third); 
-}
-
 .about-me {
     height: 70vh;
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
     margin-left: 100px;
     background-color: #fff;
     box-shadow: 0 0 10px #ccc;
@@ -24,6 +19,8 @@
     transition: 0.5s linear;
     cursor: grab;
 }
+
+
 
 .about-me:hover {
     box-shadow: 0 0 20px #ccc,

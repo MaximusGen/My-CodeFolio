@@ -1,0 +1,19 @@
+ .skills-container {
+     display: flex;
+     justify-content: center;
+     align-items:center;
+ }
+
+ .skills {
+     display: flex;
+     justify-content: center;
+     align-items:center;
+     flex-direction: column;
+     width: 50%;
+     margin-right: 100px;
+ }
+
+ .skills_text {
+     color: #fff;
+     font-size: 3rem;
+ }

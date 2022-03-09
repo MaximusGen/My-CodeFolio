@@ -1,0 +1,59 @@
+.projets-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.projets-container h2 span {
+    display: inline-block;
+    z-index: 100;
+}
+
+.button {
+    background-color: #ccc;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.modal {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.modal img {
+  cursor: pointer;
+}
+
+.modal p {
+  color: #fff;
+  font-size: 3.5rem;
+  position: absolute;
+  top: 50px;
+  left: -200px;
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000000e1;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+/* .container-modaldrag {
+    width: 100vw;
+    height: 100vh;
+} */
